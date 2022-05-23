@@ -9,6 +9,7 @@
   --font-bai-jamjuree: "Bai Jamjuree", sans-serif;
   --green-buttom: #8a9a5b;
   --blue-buttom: #2666cf;
+  --red-heart: #ff0000;
 }
 
 body {
@@ -73,10 +74,6 @@ img {
   font-size: 1.25rem;
 }
 
-/* .intelegia {
-  margin-left: 0.5rem;
-} */
-
 .wrapper .blog:hover {
   background-color: var(--white);
   color: var(--green-buttom);
@@ -128,13 +125,30 @@ img {
   font-size: 2rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  /* margin-left: 0.5rem; */
 }
 
 .div-2-right {
   font-size: 2rem;
   line-height: 4.7rem;
   margin-top: 2.1rem;
+}
+
+.intelegia {
+  color: var(--blue-buttom);
+}
+
+.list-dot .oncology:hover,
+.list-dot .rare-diseases:hover,
+.list-dot .gene-therapies:hover,
+.list-dot .personalized-medicine:hover {
+  font-weight: 800;
+  color: darkmagenta;
+}
+
+p span:not(#word-spacing, .red-heart) {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--blue-buttom);
 }
 
 .div-3 {
@@ -194,6 +208,10 @@ img {
   margin-right: auto;
 }
 
+.section p {
+  text-align: justify;
+}
+
 .linea {
   border-top: medium solid var(--blue-header);
   height: 2px;
@@ -233,15 +251,36 @@ img {
   color: var(--blue-header);
 }
 
+.copyright {
+  color: hsl(209, 6%, 66%);
+  text-align: right;
+  margin-right: 5rem;
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+.copyright .red-heart {
+  color: var(--red-heart);
+}
+
+#word-spacing {
+  word-spacing: 1.5rem;
+}
+
 @media screen and (max-width: 1024px) {
   .intelegia,
   .div-2-list-left {
     margin-left: 0.5rem;
   }
+
+  .section p {
+    text-align: justify;
+  }
 }
 
 @media screen and (max-width: 740px) {
   .wrapper ul {
+    padding-left: 0;
     flex-direction: column;
     text-align: center;
     line-height: 3.125rem;
@@ -288,6 +327,10 @@ img {
     margin: 0;
   }
 
+  .section p {
+    text-align: justify;
+  }
+
   .social-media ul {
     flex-direction: column;
     font-size: 1rem;
@@ -308,5 +351,10 @@ img {
   .contacto {
     padding-left: 0.6rem;
     margin-left: 2.75rem;
+  }
+
+  .copyright p {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
